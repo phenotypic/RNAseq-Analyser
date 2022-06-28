@@ -2,7 +2,7 @@ library(dplyr)
 library(Seurat)
 library(patchwork)
 
-pbmc.data <- Read10X(data.dir = "~/Downloads/scRNA-seq/RK5")
+pbmc.data <- Read10X(data.dir = "~/Downloads/RK5")
 pbmc <- CreateSeuratObject(counts = pbmc.data, project = "RK5", min.cells = 3, min.features = 200)
 
 pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^mt-")
