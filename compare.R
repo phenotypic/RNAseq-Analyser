@@ -3,8 +3,8 @@ library(patchwork)
 library(cowplot)
 library(dplyr)
 
-rk5.data <- Read10X(data.dir = "~/Downloads/scRNA-seq/RK5")
-rk6.data <- Read10X(data.dir = "~/Downloads/scRNA-seq/RK6")
+rk5.data <- Read10X(data.dir = "~/Downloads/RK5")
+rk6.data <- Read10X(data.dir = "~/Downloads/RK6")
 
 rk5 <- CreateSeuratObject(counts = rk5.data, min.cells = 3, min.features = 200, project = "rk5")
 rk5$rk6 <- "rk5"
